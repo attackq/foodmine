@@ -1,0 +1,29 @@
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+
+  input {
+    border: none;
+    outline: none;
+    padding: 0.7rem;
+    background: rgb(237, 237, 237);
+    font-size: 0.9rem;
+  }
+
+  button {
+    border: none;
+    color: white;
+    margin-left: 0.3rem;
+    background: rgb(88, 88, 189);
+    transition: all 0.1s linear;
+    cursor: pointer;
+    font-size: 0.9rem;
+
+    &:hover {
+      color: black;
+      background: #0bd6ff;
+    }
+  }
+}
