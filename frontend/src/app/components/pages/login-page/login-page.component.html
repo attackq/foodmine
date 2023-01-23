@@ -6,6 +6,12 @@
       <text-input [control]="password!" label="Password" [showErrorsWhen]="isSubmitted" type="password"></text-input>
 
       <default-button text="Login"></default-button>
+      <div class="register">
+        New user? &nbsp;
+        <a routerLink="/register" [queryParams]="{returnUrl: returnUrl}">
+          Register Here
+        </a>
+      </div>
     </form>
   </div>
 </div>
