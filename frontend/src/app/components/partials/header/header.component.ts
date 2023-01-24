@@ -9,22 +9,21 @@ import { User } from 'src/app/shared/models/User';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  user: User;
-  cartItems: number;
+  user!: User;
+  cartQuantity = 0;
   constructor(
     private cartService: CartService,
     private userService: UserService
   ) {
     this.cartService.getCartObservable().subscribe((cart) => {
-      this.cartItems = cart.items.length;
+      this.cartQuantity = cart.totalCount;
+    });
+    userService.userObservable.subscribe((newUser) => {
+      this.user = newUser;
     });
   }
 
-  ngOnInit(): void {
-    this.userService.userObservable.subscribe((userFromLocal) => {
-      this.user = userFromLocal;
-    });
-  }
+  ngOnInit(): void {}
 
   logout() {
     this.userService.logout();
