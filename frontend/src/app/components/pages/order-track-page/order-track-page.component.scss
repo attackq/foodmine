@@ -1,0 +1,25 @@
+.container {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  .content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 35rem;
+    margin-right: 1rem;
+  }
+  .details {
+    margin-top: 1rem;
+    & > div {
+      margin: 1rem;
+      font-size: 1.1rem;
+    }
+    strong {
+      display: inline-block;
+      width: 20%;
+    }
+  }
+}
